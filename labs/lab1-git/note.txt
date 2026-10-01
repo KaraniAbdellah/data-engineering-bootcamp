@@ -55,4 +55,6 @@ git revert <commmit>: create new commit and cancell existance commit.
     git branch -d NameOfBranch: delete branch
     git merge branchName: merge existance branch with branchName
 
-Abdellah
+
+// PR:
+- pull request: is way of revision changes of other developer before merge.
