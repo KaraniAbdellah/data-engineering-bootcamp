@@ -44,4 +44,14 @@ git revert <commmit>: create new commit and cancell existance commit.
 - Azure DevOps: Ressource in Azure
 
 
-Karani
+// Braches:
+- Each Person with Branch
+- End Feature = Remove Branch
+
+- Commands:
+    git branch: list branch
+    git checkout -b nameofbranch: go to another branch
+    git switch NameOfBranch: switch to another branch
+    git branch -d NameOfBranch: delete branch
+
+Abdellah
