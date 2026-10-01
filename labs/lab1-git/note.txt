@@ -58,3 +58,7 @@ git revert <commmit>: create new commit and cancell existance commit.
 
 // PR:
 - pull request: is way of revision changes of other developer before merge.
+- Steps to work with PR:
+    - We Push Code to my Branch
+    - We Create Pull Request
+    - Tag Reviewrs - or Connect Him
