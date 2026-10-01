@@ -53,5 +53,6 @@ git revert <commmit>: create new commit and cancell existance commit.
     git checkout -b nameofbranch: go to another branch
     git switch NameOfBranch: switch to another branch
     git branch -d NameOfBranch: delete branch
+    git merge branchName: merge existance branch with branchName
 
 Abdellah
