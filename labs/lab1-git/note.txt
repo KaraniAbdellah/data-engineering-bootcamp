@@ -1,0 +1,44 @@
+// Steps:
+- Working Directory (Local): git status
+- Staging Area (Abstract Space): git add .
+- Local Repository: git commit -m "feat: ..."
+- Remote (Github): Remote Place
+
+
+// Start By Commands:
+git init: this create .git [cache file - check it with "ls -a"] inside directory. and .git save all changes and this we gonna push.
+
+git remote add origin <url>:
+git branch -M main
+git push -u origin main
+    - -u: link local with remote
+git push: We push .git - for second time we used just git push
+
+git commit -m "MSG": msg that describe feature.
+    - feat: ...
+    - clean: ...
+    - fix: ...
+
+git log: logs for commits
+    - hash for commit: used for background or forward.
+
+git config user.name "Abdellah Karani"L this for change user name
+
+git diff nameOfFile: command that give me what change on file.
+
+git pull = git merge + git fetch
+
+git revert <commmit>: create new commit and cancell existance commit.
+
+// Best Practice:
+- We develope before doing git pull. Start Always by "git pull"
+
+
+// Fork & Clone:
+- Fork: Copied in my Account
+- Clone: Clone To my Local Machine
+
+
+// Providers
+- Github - GitLab
+- Azure DevOps: Ressource in Azure
