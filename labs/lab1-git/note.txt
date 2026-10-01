@@ -42,3 +42,6 @@ git revert <commmit>: create new commit and cancell existance commit.
 // Providers
 - Github - GitLab
 - Azure DevOps: Ressource in Azure
+
+
+Karani
