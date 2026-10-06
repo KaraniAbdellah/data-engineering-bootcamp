@@ -30,8 +30,8 @@
 
 // Bash Structure
 /*
-- Varaibles && Condition && Function
-- We can run script.sh by put it in ~/.bashrc LIKE (source path_to_script)
+- Varaibles && Condition && Function && Loops
+- NOTE: We can run script.sh by put it in ~/.bashrc LIKE (source path_to_script) - We write just function name as command
 */
 
 // Advanced Commands:
