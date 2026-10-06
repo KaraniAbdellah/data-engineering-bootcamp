@@ -44,4 +44,4 @@ push() {
     fi
 }
 
-push "commit message"
+# push "commit message"
