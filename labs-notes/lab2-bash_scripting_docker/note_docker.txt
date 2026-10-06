@@ -1,0 +1,27 @@
+// Docker Basic
+/*
+    - Portability and Isolation and Rapid
+    - Image: like recette - is config file
+    - Container: Like instance
+
+    - First We Should Start Docker Engine
+    - docker pull image:latest --> latest is very danger
+    - docker run -d -p 8000:80 nginx:stable-alpine-perl
+        -d: run docker in background
+    - images created with Dockerfile
+    - Dockerfile: instruction to build image and we run image to create container.
+    - Build Time and Run Time
+    - docker ps: list container
+    - docker stop container
+
+    - Why We Create More Container Based on Images.
+*/
+
+
+
+
+// Docker Life Cycle
+
+
+
+// Production & Cloud

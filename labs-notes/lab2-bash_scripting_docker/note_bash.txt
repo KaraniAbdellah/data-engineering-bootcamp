@@ -1,0 +1,43 @@
+// Bash Scripting
+/*
+    - Automatise Tasks
+    - Problem of Python: Download Python, Download Libs, Versions.
+*/
+
+// Bash Essentials:
+/*
+    - Remove file with commands - in trach you will no find it.
+    - In server we use vi, vim, nano for update files.
+*/
+
+// Commands
+/*
+    - help, ls -ali, pwd, rmdir, cd,
+    - mkdir data && cd data
+    - ~: telda (home directory)
+    - Hidden file: file that start by .fileName
+    - ls -ai: display filename with id
+        13870388 drwxrwxr-x  3 abdellah abdellah      4096 Jan 22  2026 .yarn/
+    - rm -rvi:
+        i for take permission before remove.
+        v: for tracability. r for folder
+    - pip: pipeline for commands; and output of command is input of nother commands
+        cat note.txt | grep "line" | wc -l
+- grep and find:
+    grep for search content
+    find search about file
+*/
+
+// Bash Structure
+/*
+- Varaibles && Condition && Function
+- We can run script.sh by put it in ~/.bashrc LIKE (source path_to_script)
+*/
+
+// Advanced Commands:
+/*
+    - awk:
+    - sed:
+    - head:
+    - tail:
+*/
