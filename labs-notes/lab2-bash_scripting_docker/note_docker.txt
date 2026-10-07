@@ -1,13 +1,13 @@
-// Docker Basic
+// Why Docker
 /*
     - Portability and Isolation and Rapid
     - Image: like recette - is config file
     - Container: Like instance
+*/
 
-    - First We Should Start Docker Engine
-    - docker pull image:latest --> latest is very danger
-    - docker run -d -p 8000:80 nginx:stable-alpine-perl
-        -d: run docker in background
+// Get Started
+/*
+    - First We Should Start Docker Engine (start docker desktop)
     - images created with Dockerfile
     - Dockerfile: instruction to build image and we run image to create container.
     - Build Time and Run Time
@@ -15,13 +15,67 @@
     - docker stop container
 
     - Why We Create More Container Based on Images.
+        -->
+
+    - Cluster vs Container:
+*/
+
+// Docker Commands
+/*
+    - docker pull image:latest --> latest is very danger
+    - docker images
+    - docker ps -a: list all container
+    - docker ps: list running container
+    - docker stats
+    - docker logs containerId
+    - docker build -t .
+    - docker run -d -p 8080:8000 imageName
+        --> 8080:8000 - HOST_PORT:CONTAINER_PORT
+        --> Port Mapping Between Machine Port and Container Port
+    - docker system prune -a: clean container, image, ...
+*/
+
+// Docker Life Cycle
+/*
+    Dockerfile - Image - Container
 */
 
 
+// Docker Performance
+/*
+    --> use alpin, slim images --> very small
+    --> cache make image with big size
+    --> How to use cache:  the thing that change a lot make it in top of layers.
+        - like COPY . ., pip install -r req.txt
+*/
 
 
-// Docker Life Cycle
+// Container Life Cycle
+/*
+   Created - Running - Paused - Stopped - Removed
+        --> Paused: make container on hold
+        --> Stopped: make container start again
+*/
 
 
+// HERE: https://github.com/datamarocbootcamps/DataMarocBootcamps-ressources-group-oct/tree/main
 
-// Production & Cloud
+
+// Docker Tag and Repositry
+/*
+- Docker Tag and Repositry
+    --> Tag is Name of Image
+    --> 3 tags from same image (may be dev image, prod image, ...)
+    -->
+*/
+
+
+// FROM/TO Local/Container and Volumes
+/*
+    - Copy From/To Docker Container
+        --> container --> local: docker cp reports idContainer:/data/
+        --> local -> container: docker cp idContainer:/data/ ./
+    ----------------------------------
+    - Docker Volume: Alternative for copy from/to local/container. like we have access to container file without enter to container.
+    - LIke we link files in host with launching container.
+*/
