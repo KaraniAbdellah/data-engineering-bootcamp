@@ -1,0 +1,171 @@
+// Data Engineering
+/*
+- Data: Data (file, video, images, ...) Information Insights
+- Engineering: Science for build, design, improvement of system (Core is Data Pipeline)
+*/
+
+
+// Data Pipeline
+/*
+    - steps from source to target
+    - From source to target:
+        - Source: usine, capteur, system
+        --> Stockage -->
+        Example --> Capteur --> .... --> DataWare House
+    - Pipeline Should Answer Three Question:
+        --> What is Data
+        --> How to Work
+        --> Frequence of Data
+*/
+
+
+// ETL and ELT
+/*
+    Data Pipeline can be:
+        ELT: Data is stable from x to y directly.
+            and transformation happen in one place.
+        ETL: Data is not stable. we need transformation.
+            --> Ex: Source (API) - Staging Area - Target
+
+        T (Transformation): we transforme data in place
+            that script launch (Staging Are).
+
+    But Why There two parts:
+        - Volumetrie
+        - Conformite (Security for personnal data (like morrocan data in cloud))
+        - Felexiblite
+        - Calcul Cost
+        - Vitesse
+
+    When to use ELT and ETL:
+        - ELT: Get all Data. And Then we gonna look what we need.
+        - ETL: We do not need all data for get insight
+*/
+
+
+// Ingestion Batch and Streaming
+/*
+    Data can be in two type:
+        Batch: Bim for example can send data at 11:20min
+            --> Data here is files
+            --> Pipeline: Fixed Time (11:59), Event Driven (we need another event for send data).
+        Streaming: in real time if someone sell something. data come to system.
+            --> Data here is events
+*/
+
+
+// Data Lake, Lake House, Data Warehouses
+/*
+    - Data Lake(Cloud Storage): centralized storage that can hold anything (vides, files, images, parquet).
+    we use this because we do not know why we need this data.
+
+    - Data Warehouse(Big Query[Anayltics exit here]): There is restriction. data is structured (csv file). and data come from deffrent source. we know where we want to go. and data warehouse is result of data modeling. we start by data modeling and then data warehouse.
+
+    - Lakehouse: We merge Datalake and Data Warehouse. Means I am dealing with data as files but storage as Lake (there is parquet file).
+
+    - What LakeHouse Add:
+        - Transction ACID
+        - Time Travel
+        - Enforce Shema: we can not insert something deffrent to table model
+        - Upsert (merge): insert and update
+*/
+
+
+// OLAP and OLTP
+/*
+    Two concept that let us define how we can use database
+    OLAP (transactionnel): this for
+    OLTP (anayltic):
+*/
+
+
+// Data Modeling
+/*
+    - Long term we store big data and very hard to get insights.
+    - and also problem of storage. we store huge data.
+
+    - Two person comes:
+        - Enmon (Bottom-up): Store all Data in Table. and for each busuniss need we have table. We need to define all data of our system.
+        - Kimmblle (Top-down): We define Business process. and then we model data.
+            --> What is your Business Process (Bim need to know how many client per day)?
+            --> Grain (Client Indrive Demand Journey + Journey own by driver + driver take VTC + VTC has number of place ...):  we define grain and we ask question (How many user take this driver ?) so technically each driver related to client (HINT ABOUT DATA MODELING).
+            --> Dimentional Table: define tables. driver, vtc, client. reservation.
+            --> Fact Table: Each Need we need table. this table can hold count of drivers, .... this table contain anaything that we can calculted from dmi table.
+*/
+
+
+// Example of Data Modeling: We need to choose data to use for business process
+/*
+    Our Table that already exit in ou database:
+    Product (pk, name, category, price)
+    Customer (pk. name, addres)
+    Order (pk, productId, customerId, date_id, quantity)
+    store (pk, addres)
+    Location (pk, lan, lat)
+
+    - Dimential Table:
+    dim_product: column qualitatif (quantity)
+    dim_customer: (pk. name, addres)
+    dim_store: ...
+    dim_loc: ...
+
+    - Fact Table (column calculated from dim table):
+    fact_sales: (name, city, quantity, price, )
+
+    - Example Data:
+        - Khalid, casa, t-shirt, 10, 2
+        - mohamed, agadir, sucre, 4, 2
+        - Khalid, agadir, sucre, 4, 2
+    - Question1 (sum of quantity per product):
+        sucre: 8
+        t-shirt: 8
+        ** in this we can skip price column. there is no meaning in first question. **
+    - Question2 (Sum by price for each product):
+        sucre: 4
+        t-shirt: 2
+*/
+
+
+// Slowy Changing Dimensions (SCD)
+/*
+    - Type 1:
+    - Type 2 (Recomanded):
+    - Type 3:
+*/
+
+
+// PipeLines Orchestration
+/*
+    - Launch Pipeline may be need another pipeline
+    - We work with DAG (Direct Acyclic Graph) - Group of Pipelines. and Dag is Concept.
+    - We have pipeline A and pipeline b.
+    - when pA and pB good --> launch pipline c.
+
+    SRC A - PA --\
+                    --> transform --> Load
+    SRC B - PB --/
+
+    This ETL. We Need Tools Here.
+*/
+
+
+
+
+// Big Images
+/*
+    Source - Ingestion - Data Lake - Transform - DataWareHouse - ML/AI
+
+    Source: Usine, Capteurs, ...
+    Ingestion: Batch or Streaming
+    Transformation: ETL or ELT
+    Modeling: Kimbal
+    Request: OLTP and OLAP
+    Resilance: Orchestration
+*/
+
+
+// LABS
+/*
+    - Work with DummyJson + Airflow (Our Orchestrator)
+    - Dag Applied in Batch and Streaming.
+*/
