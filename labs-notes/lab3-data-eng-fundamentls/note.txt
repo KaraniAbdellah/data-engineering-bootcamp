@@ -1,7 +1,7 @@
 // Data Engineering
 /*
-- Data: Data (file, video, images, ...) Information Insights
-- Engineering: Science for build, design, improvement of system (Core is Data Pipeline)
+    - Data: Data (file, video, images, ...) Information Insights
+    - Engineering: Science for build, design, improvement of system (Core is Data Pipeline)
 */
 
 
@@ -155,7 +155,7 @@
 /*
     Source → Ingestion → Storage → Transformation → Modeling → Serving (How we want to use this data) → Use
         ----> (all controlled by Orchestration Airflow)
-    
+
     Source: Usine, Capteurs, ...
     Ingestion: Batch or Streaming
     Transformation: ETL or ELT

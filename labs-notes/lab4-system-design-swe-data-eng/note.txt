@@ -1,1 +1,18 @@
-//
+// How to Design You API
+/* We use api.txt
+    - Start By define Entites With Attributes (Customer, Charge)
+        Customer: (id, name, description, ...)
+    - Define Endpoint For Each Enties
+        - Chager: We need to define function (CURD)
+            --> createCharge(charge: Charge)
+            --> getCharge(id: uid)
+            --> updateCharge(id: uid)
+            --> deleteCharge(id: uid)
+        - Customer: We need also to define functions
+            --> createCustomerAccount(customer: Customer)
+            --> getCustomerInfo(id: uid)
+*/
+
+/* We use api-swager.yaml
+    - Long Way - But is not practice for interviewer. but for production swager is good.
+*/
