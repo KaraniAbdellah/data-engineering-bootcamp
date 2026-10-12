@@ -151,16 +151,17 @@
 
 
 
-// Big Images
+// 😃️ Big Images
 /*
-    Source - Ingestion - Data Lake - Transform - DataWareHouse - ML/AI
-
+    Source → Ingestion → Storage → Transformation → Modeling → Serving (How we want to use this data) → Use
+        ----> (all controlled by Orchestration Airflow)
+    
     Source: Usine, Capteurs, ...
     Ingestion: Batch or Streaming
     Transformation: ETL or ELT
     Modeling: Kimbal
-    Request: OLTP and OLAP
-    Resilance: Orchestration
+    Serving: OLTP and OLAP
+    Use: Reports, Dashbaord, ML, ...
 */
 
 
