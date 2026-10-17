@@ -1,0 +1,140 @@
+// IAM: Identity Access Mangamenet
+/*
+    Is Server That We use to give access to member to our team.
+    Ressource = Service
+
+    Member || Group - IAM - Ressource
+
+    Best Practice:
+        - Less Previlage: never give all access to user.
+        - Define Membre Premission Not role: (give member team just role for select table not write, ...)
+
+    Note:
+        Role: Have a lot of Premission (view table, create ariflow, ...)
+*/
+
+
+// Region and Zones
+/*
+    Geographie: erope, paris, madrid
+        Region: europe-west-9 (paris)
+            Zone1 -- Zone2 -- Zone3 (Real Isolated DataCenter)
+
+    Dual region Application: app deployed in two regions
+    Multi region Application: app deployed in many regions
+        --> This very important to avaibality
+
+    How to Choose Region:
+        - Latence:
+        - Souvernity
+        - Cost
+        - Colocalisation
+*/
+
+
+// BigQuery
+/*
+    - is DataWareHouse for google.
+    - All FInal Destination Of Data Pipelines if BigQuery.
+
+    - DataWareHouse Contains:
+        - Table: (native: stored in disk, external: stores in drive)
+        - Views:  SQL scripts
+        - Function: like we have to convert timestamps to Date.
+        W can crate function
+        - Information Schema:
+*/
+
+
+// Data Piple With BigQuery
+/*
+    Staging - Core - Mart
+
+    Staging: we get all data. why we create source of truth. and we do not know bussiness need (but we can get bussniss need). We Goal if to Copy Data From Source.
+
+    Core: Transformation (Clean, ....)
+
+    Mart: Product Table Ready to use.
+
+    Staging area Does not exit in streaming area. But Batch Prcessing we need staging ares.
+
+
+    Partiting and Clustring:
+        We Start Partiion and then Clsutering in BigQuery.
+        Parition:
+        Clustring:
+*/
+
+
+// Paratice
+/*
+    - Start by making Dataset on Big Query
+    -
+*/
+
+
+// Google cloud storage
+/*
+    Is Data Lake for GCP Can hold any data.
+    - Staructured Data: Parquest
+    - No Structued Data:PDF, images
+    - Semi - Structured: Json, CSV
+
+    - Can not Load Data from Google Cloud Storage ot Big Query Data Should be in same region.
+
+    // Autonatmie (Some explcation About ...)
+*/
+
+
+//
+
+
+// CI/CD
+/*
+    Push --> Build --> Image --> Terraform --> Deploy
+
+    Yaml File: We can push just is changes happen in branches, ...
+
+
+    Push --> Build --> Image --> Deploy
+*/
+
+
+
+// Service Account: just an email identified a user.
+Permission we give to user means t user that have service acccount.
+/*
+    - Is Email Thta we use to attached a permission a traver IAM.
+    We IAM.
+    - Service A: Cloud Build
+        --- We Create Service Account and We Attached Service A.
+    - Service B: Artifact Registry
+
+    - Can not service comminucate to another service we shluld use Service account.
+
+*/
+
+
+// Cloud RUn
+/*
+    - is Virtual Machine That I can use to deploy Docker image.
+    - is run just container
+    - is Http Native (Recois Http Request).
+    - And is it scale in demand (horizantal Scaling auto) and 80 request in second, and if there no trafic (zero machine).
+    - Revision is docker container that take trafic.
+*/
+
+
+
+// Pub/Sub
+/*
+    - Publisher - Topic - Subscriber Model
+    - Topic: DB light
+    - Publiher can be: Gail Watch, Service Cloud Run, Capters.
+    - Subscriber: BigQuery,
+    - Nature de topic can be send also to subcrivbe data.
+
+    just this.
+
+    Eventarc: Suppose wehva e backet gcs. I want when I file down to storage. I need to do some traitement. how GCS can know. evantrac look.
+*/

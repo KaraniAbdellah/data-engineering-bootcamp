@@ -1,0 +1,26 @@
+// DBT: data build tool
+/*
+    We use for transformation. is T for ETL.
+    And DBT transform data.
+    DBT is not orcherstration, not new language, engine ingestion.
+
+    Jinja is Tool (Script SQL)
+
+    DBT we work with Select
+
+    DBT Read all thing and understand.
+
+    But We Transform Data manually Or we can transform with dbt.
+*/
+
+// Best Practice
+/*
+    Never use * in select.
+
+    Jinja:
+        select * from {{-}}
+        select * from {{*function call*}}
+        select * from {{#comment#}}
+
+    Use materziled View better then table. but it take cost a lot.
+*/
